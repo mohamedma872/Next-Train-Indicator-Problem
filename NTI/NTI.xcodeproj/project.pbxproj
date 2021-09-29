@@ -18,6 +18,7 @@
 		BB53EC192704BDB200E1BF87 /* NTIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC182704BDB200E1BF87 /* NTIUITestsLaunchTests.swift */; };
 		BB53EC272704BE1200E1BF87 /* TrainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC262704BE1200E1BF87 /* TrainModel.swift */; };
 		BB53EC292704BE2400E1BF87 /* DestinationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC282704BE2400E1BF87 /* DestinationModel.swift */; };
+		BB53EC2B2704C93000E1BF87 /* Next​Train​​Indicator​Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC2A2704C93000E1BF87 /* Next​Train​​Indicator​Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		BB53EC182704BDB200E1BF87 /* NTIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BB53EC262704BE1200E1BF87 /* TrainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainModel.swift; sourceTree = "<group>"; };
 		BB53EC282704BE2400E1BF87 /* DestinationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationModel.swift; sourceTree = "<group>"; };
+		BB53EC2A2704C93000E1BF87 /* Next​Train​​Indicator​Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Next​Train​​Indicator​Model.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			children = (
 				BB53EC262704BE1200E1BF87 /* TrainModel.swift */,
 				BB53EC282704BE2400E1BF87 /* DestinationModel.swift */,
+				BB53EC2A2704C93000E1BF87 /* Next​Train​​Indicator​Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB53EBFA2704BDAF00E1BF87 /* ViewController.swift in Sources */,
+				BB53EC2B2704C93000E1BF87 /* Next​Train​​Indicator​Model.swift in Sources */,
 				BB53EBF62704BDAF00E1BF87 /* AppDelegate.swift in Sources */,
 				BB53EC272704BE1200E1BF87 /* TrainModel.swift in Sources */,
 				BB53EBF82704BDAF00E1BF87 /* SceneDelegate.swift in Sources */,
