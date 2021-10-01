@@ -23,7 +23,7 @@ class TimeHelperTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
         // given
-        let timeHelper = TimeHelperMock()
+        let timeHelper = TimeHelperMock(specificTime: "8:00")
         
         // when
         //get current time
@@ -32,7 +32,7 @@ class TimeHelperTests: XCTestCase {
         let formatter = DateFormatter()
         formatter.dateFormat = GlobalConstants.format
         // get harcoded date as string
-        let nowTimeString = timeHelper.getTimeNow(specificTime: "8:00")
+        let nowTimeString = timeHelper.getTimeNow()
         // Convert String to Date
         let nowTime =  formatter.date(from: nowTimeString!)
         // fake station start time
@@ -56,7 +56,7 @@ class TimeHelperTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
         // given
-        let timeHelper = TimeHelperMock()
+        let timeHelper = TimeHelperMock(specificTime: "8:00")
         
         // when
         //get current time
@@ -66,7 +66,7 @@ class TimeHelperTests: XCTestCase {
         let formatter = DateFormatter()
         formatter.dateFormat = GlobalConstants.format
         // get harcoded date as string
-        let nowTimeString = timeHelper.getTimeNow(specificTime: "8:00")
+        let nowTimeString = timeHelper.getTimeNow()
         // Convert String to Date
         let nowTime =  formatter.date(from: nowTimeString!)
         // fake station start time

@@ -10,7 +10,7 @@ struct GlobalConstants{
     static let format = "HH:mm"
 }
 
-enum MeasureUnit{
+enum RepeatIntervalUnit{
     case minute
     case hour
 }

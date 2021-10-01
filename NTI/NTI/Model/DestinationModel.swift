@@ -9,5 +9,7 @@ import Foundation
 struct DestinationModel {
     var name: String
     // Frequency in Min
-    var frequency : (frequencyTime:Int,measurementUnit: MeasureUnit, startH:String?, endH: String?)
+    var frequency : (frequencyTime:Int,measurementUnit: RepeatIntervalUnit, startH:String?, endH: String?)
+    // schedules List represent the train schedules like train time table for every station
+    var schedulesLst : [Date]
 }

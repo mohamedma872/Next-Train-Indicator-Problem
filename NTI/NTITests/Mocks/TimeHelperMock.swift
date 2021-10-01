@@ -8,18 +8,24 @@
 import Foundation
 class TimeHelperMock: ITimeHelper
 {
+    var currentTime: String?
+    init(specificTime: String?)
+    {
+        self.currentTime = specificTime
+    }
+    
     /// spy method for getting current time in predefined format
     ///
     /// - parameter specificTime: this paramter is optional and we use it in test purpose only incase we need to return hardcoded date.
     /// - returns: String?
-    func getTimeNow(specificTime: String?) -> String? {
-        return specificTime
+    func getTimeNow() -> String? {
+        return currentTime
     }
     /// check current or specific time is between two range or not
     /// - Parameters:
     ///   - currentTime: this paramter is current time .
-    ///   - startTimeRange: this paramter is current time as start time range .
-    ///   - endTimeRange: this paramter is current time as end time range  .
+    ///   - startTimeRange: this paramter is start time range .
+    ///   - endTimeRange: this paramter is end time range .
     /// - Returns: Bool
    func checkTimeWithinStationTimeRange(currentTime: Date,startTimeRange: Date,endTimeRange: Date) -> Bool
     {
