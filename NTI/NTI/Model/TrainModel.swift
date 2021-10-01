@@ -8,8 +8,8 @@
 import Foundation
 struct TrainModel {
     var trainNumber: String
-    //the train could be service off so destination should be optional
+    // the train could be service off so destination should be optional
     var destination: DestinationModel?
-    //the train could be service off so amount​Of​Minutes should be optional - Swift Tuples
+    // the train could be service off so amount​Of​Minutes should be optional - Swift Tuples
     var amount​Of​Minutes : (number:Int, measureUnit:String)?
 }
