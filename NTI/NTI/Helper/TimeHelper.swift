@@ -7,20 +7,18 @@
 import Foundation
 import UIKit
 
-protocol ITimeHelper{
-    
+@objc protocol ITimeHelper{
     /// check current or specific time is between two range or not
     /// - Parameters:
     ///   - currentTime: this paramter is current time .
-    ///   - startTimeRange: this paramter is current time as start time range .
-    ///   - endTimeRange: this paramter is current time as end time range  .
+    ///   - startTimeRange: this paramter is start time range .
+    ///   - endTimeRange: this paramter is end time range .
     /// - Returns: Bool
-    func checkTimeWithinStationTimeRange(currentTime: Date,startTimeRange: Date,endTimeRange: Date) -> Bool
+    @objc optional func checkTimeWithinStationTimeRange(currentTime: Date,startTimeRange: Date,endTimeRange: Date) -> Bool
     /// Get current time in predefined format
     ///
-    /// - parameter specificTime: this paramter is optional and we use it in test purpose only incase we need to return hardcoded date.
     /// - returns: String?
-    func getTimeNow(specificTime: String?) -> String?
+    @objc optional func getTimeNow() -> String?
 }
 
 class TimeHelper : ITimeHelper
@@ -28,8 +26,8 @@ class TimeHelper : ITimeHelper
     /// check current or specific time is between two range or not
     /// - Parameters:
     ///   - currentTime: this paramter is current time .
-    ///   - startTimeRange: this paramter is current time as start time range .
-    ///   - endTimeRange: this paramter is current time as end time range  .
+    ///   - startTimeRange: this paramter is start time range .
+    ///   - endTimeRange: this paramter is end time range .
     /// - Returns: Bool
     func checkTimeWithinStationTimeRange(currentTime: Date,startTimeRange: Date,endTimeRange: Date) -> Bool
     {
@@ -51,7 +49,7 @@ class TimeHelper : ITimeHelper
     ///
     /// - parameter specificTime: this paramter is optional and we use it in test purpose only incase we need to return hardcoded date.
     /// - returns: String?
-    func getTimeNow(specificTime: String?) -> String?
+    func getTimeNow() -> String?
     {
         let now = Date()
         if let formate = now.getFormattedDate()
@@ -68,7 +66,7 @@ class TimeHelper : ITimeHelper
 extension Formatter {
     /// Get DateFormatter object in predefined format
     /// - returns: DateFormatter()
-    static func getDateFormatter() -> Formatter {
+    static func getDateFormatter() -> DateFormatter {
         let dateformate = DateFormatter()
         dateformate.dateFormat = GlobalConstants.format
         dateformate.locale = Locale.current
@@ -82,4 +80,12 @@ extension Date {
     func getFormattedDate() -> String? {
         return Formatter.getDateFormatter().string(for: self)
     }
+    func dayNumberOfWeek() -> Int? {
+        return Calendar.current.dateComponents([.weekday], from: self).weekday
+    }
+    func currenthourNumber() -> Int? {
+        return Calendar.current.dateComponents([.hour], from: self).hour
+    }
 }
+
+

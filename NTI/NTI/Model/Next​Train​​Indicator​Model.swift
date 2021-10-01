@@ -13,4 +13,5 @@ struct Next​Train​​Indicator​Model {
     var current​VT: String?
     // Platform Number for indicating where is the​ Train​​ Indicator​ board
     var PlatformNumber: Int
+
 }

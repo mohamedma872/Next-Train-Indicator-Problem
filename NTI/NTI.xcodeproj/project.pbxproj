@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3261304DC2F47E4E89C6CB6E /* Pods_NTI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAC5D4BF9383CD1CD1A9C05 /* Pods_NTI.framework */; };
+		BB209CA027076239009E00E8 /* SchedulesStationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB209C9F27076239009E00E8 /* SchedulesStationHelper.swift */; };
+		BB209CA227077F79009E00E8 /* SchedulesStationHelperMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB209CA127077F78009E00E8 /* SchedulesStationHelperMock.swift */; };
+		BB209CA527078E37009E00E8 /* SchedulesStationHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB209CA427078E37009E00E8 /* SchedulesStationHelperTests.swift */; };
 		BB53EBF62704BDAF00E1BF87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EBF52704BDAF00E1BF87 /* AppDelegate.swift */; };
 		BB53EBF82704BDAF00E1BF87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EBF72704BDAF00E1BF87 /* SceneDelegate.swift */; };
 		BB53EBFA2704BDAF00E1BF87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EBF92704BDAF00E1BF87 /* ViewController.swift */; };
@@ -62,6 +65,9 @@
 		5AAC5D4BF9383CD1CD1A9C05 /* Pods_NTI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NTI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB2DCB1CBDBFD0C4B5034AB /* Pods_NTITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NTITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60FFFFB2940E53E31E7476E4 /* Pods-NTI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTI.release.xcconfig"; path = "Target Support Files/Pods-NTI/Pods-NTI.release.xcconfig"; sourceTree = "<group>"; };
+		BB209C9F27076239009E00E8 /* SchedulesStationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesStationHelper.swift; sourceTree = "<group>"; };
+		BB209CA127077F78009E00E8 /* SchedulesStationHelperMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesStationHelperMock.swift; sourceTree = "<group>"; };
+		BB209CA427078E37009E00E8 /* SchedulesStationHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesStationHelperTests.swift; sourceTree = "<group>"; };
 		BB53EBF22704BDAF00E1BF87 /* NTI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NTI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB53EBF52704BDAF00E1BF87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB53EBF72704BDAF00E1BF87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +150,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BB209CA327078E0B009E00E8 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				BB209CA127077F78009E00E8 /* SchedulesStationHelperMock.swift */,
+				BB53EC4A27069EB800E1BF87 /* TimeHelperMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		BB53EBE92704BDAF00E1BF87 = {
 			isa = PBXGroup;
 			children = (
@@ -191,8 +206,9 @@
 		BB53EC0B2704BDB200E1BF87 /* NTITests */ = {
 			isa = PBXGroup;
 			children = (
-				BB53EC4A27069EB800E1BF87 /* TimeHelperMock.swift */,
+				BB209CA327078E0B009E00E8 /* Mocks */,
 				BBB511612706B72E00DA5A13 /* TimeHelperTests.swift */,
+				BB209CA427078E37009E00E8 /* SchedulesStationHelperTests.swift */,
 			);
 			path = NTITests;
 			sourceTree = "<group>";
@@ -222,6 +238,7 @@
 				BB53EC302706875C00E1BF87 /* TimeHelper.swift */,
 				BB53EC4627068A4500E1BF87 /* ReachabilityHelper.swift */,
 				BB53EC4827068A7E00E1BF87 /* PrintHelper.swift */,
+				BB209C9F27076239009E00E8 /* SchedulesStationHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -578,6 +595,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB53EC4527068A1C00E1BF87 /* BaseViewController.swift in Sources */,
+				BB209CA027076239009E00E8 /* SchedulesStationHelper.swift in Sources */,
 				BB53EC3E2706890600E1BF87 /* StoryboardedProtocol.swift in Sources */,
 				BB53EBFA2704BDAF00E1BF87 /* ViewController.swift in Sources */,
 				BB53EC3F2706890600E1BF87 /* CoordinatorProtocol.swift in Sources */,
@@ -602,6 +620,8 @@
 			files = (
 				BB53EC4B27069EB800E1BF87 /* TimeHelperMock.swift in Sources */,
 				BBB511622706B72E00DA5A13 /* TimeHelperTests.swift in Sources */,
+				BB209CA227077F79009E00E8 /* SchedulesStationHelperMock.swift in Sources */,
+				BB209CA527078E37009E00E8 /* SchedulesStationHelperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
