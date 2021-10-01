@@ -6,7 +6,8 @@
 //
 
 import Foundation
-
+/// # Print
+/// it will print only in debug mode
 func printToConsole(message: String) {
     #if DEBUG
         print(message)

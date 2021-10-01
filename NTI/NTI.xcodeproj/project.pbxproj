@@ -14,14 +14,13 @@
 		BB53EBFD2704BDAF00E1BF87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB53EBFB2704BDAF00E1BF87 /* Main.storyboard */; };
 		BB53EBFF2704BDB100E1BF87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB53EBFE2704BDB100E1BF87 /* Assets.xcassets */; };
 		BB53EC022704BDB100E1BF87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB53EC002704BDB100E1BF87 /* LaunchScreen.storyboard */; };
-		BB53EC0D2704BDB200E1BF87 /* NTITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC0C2704BDB200E1BF87 /* NTITests.swift */; };
 		BB53EC172704BDB200E1BF87 /* NTIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC162704BDB200E1BF87 /* NTIUITests.swift */; };
 		BB53EC192704BDB200E1BF87 /* NTIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC182704BDB200E1BF87 /* NTIUITestsLaunchTests.swift */; };
 		BB53EC272704BE1200E1BF87 /* TrainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC262704BE1200E1BF87 /* TrainModel.swift */; };
 		BB53EC292704BE2400E1BF87 /* DestinationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC282704BE2400E1BF87 /* DestinationModel.swift */; };
 		BB53EC2B2704C93000E1BF87 /* Next​Train​​Indicator​Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC2A2704C93000E1BF87 /* Next​Train​​Indicator​Model.swift */; };
 		BB53EC2D2704CDB900E1BF87 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BB53EC2C2704CDB900E1BF87 /* .swiftlint.yml */; };
-		BB53EC312706875C00E1BF87 /* TrainSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC302706875C00E1BF87 /* TrainSchedule.swift */; };
+		BB53EC312706875C00E1BF87 /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC302706875C00E1BF87 /* TimeHelper.swift */; };
 		BB53EC3D2706890600E1BF87 /* MainCoordinatorProctocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC3A2706890600E1BF87 /* MainCoordinatorProctocol.swift */; };
 		BB53EC3E2706890600E1BF87 /* StoryboardedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC3B2706890600E1BF87 /* StoryboardedProtocol.swift */; };
 		BB53EC3F2706890600E1BF87 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC3C2706890600E1BF87 /* CoordinatorProtocol.swift */; };
@@ -30,6 +29,9 @@
 		BB53EC4527068A1C00E1BF87 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC4427068A1C00E1BF87 /* BaseViewController.swift */; };
 		BB53EC4727068A4500E1BF87 /* ReachabilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC4627068A4500E1BF87 /* ReachabilityHelper.swift */; };
 		BB53EC4927068A7E00E1BF87 /* PrintHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC4827068A7E00E1BF87 /* PrintHelper.swift */; };
+		BB53EC4B27069EB800E1BF87 /* TimeHelperMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC4A27069EB800E1BF87 /* TimeHelperMock.swift */; };
+		BBB511622706B72E00DA5A13 /* TimeHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB511612706B72E00DA5A13 /* TimeHelperTests.swift */; };
+		BBB5116527073C4B00DA5A13 /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5116427073C4B00DA5A13 /* GlobalConstant.swift */; };
 		E3516498A0298483A877DB25 /* Pods_NTITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB2DCB1CBDBFD0C4B5034AB /* Pods_NTITests.framework */; };
 		EE80AFC081C88002B673CC64 /* Pods_NTI_NTIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05FC017A6E0B7E42859B57CF /* Pods_NTI_NTIUITests.framework */; };
 /* End PBXBuildFile section */
@@ -69,7 +71,6 @@
 		BB53EC012704BDB100E1BF87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB53EC032704BDB100E1BF87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB53EC082704BDB200E1BF87 /* NTITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NTITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB53EC0C2704BDB200E1BF87 /* NTITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTITests.swift; sourceTree = "<group>"; };
 		BB53EC122704BDB200E1BF87 /* NTIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NTIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB53EC162704BDB200E1BF87 /* NTIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTIUITests.swift; sourceTree = "<group>"; };
 		BB53EC182704BDB200E1BF87 /* NTIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTIUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -77,7 +78,7 @@
 		BB53EC282704BE2400E1BF87 /* DestinationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationModel.swift; sourceTree = "<group>"; };
 		BB53EC2A2704C93000E1BF87 /* Next​Train​​Indicator​Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Next​Train​​Indicator​Model.swift"; sourceTree = "<group>"; };
 		BB53EC2C2704CDB900E1BF87 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		BB53EC302706875C00E1BF87 /* TrainSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainSchedule.swift; sourceTree = "<group>"; };
+		BB53EC302706875C00E1BF87 /* TimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHelper.swift; sourceTree = "<group>"; };
 		BB53EC3A2706890600E1BF87 /* MainCoordinatorProctocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinatorProctocol.swift; sourceTree = "<group>"; };
 		BB53EC3B2706890600E1BF87 /* StoryboardedProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardedProtocol.swift; sourceTree = "<group>"; };
 		BB53EC3C2706890600E1BF87 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
@@ -86,6 +87,9 @@
 		BB53EC4427068A1C00E1BF87 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BB53EC4627068A4500E1BF87 /* ReachabilityHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityHelper.swift; sourceTree = "<group>"; };
 		BB53EC4827068A7E00E1BF87 /* PrintHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintHelper.swift; sourceTree = "<group>"; };
+		BB53EC4A27069EB800E1BF87 /* TimeHelperMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHelperMock.swift; sourceTree = "<group>"; };
+		BBB511612706B72E00DA5A13 /* TimeHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHelperTests.swift; sourceTree = "<group>"; };
+		BBB5116427073C4B00DA5A13 /* GlobalConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
 		EC3217B8D20EF054F2F36239 /* Pods-NTI-NTIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTI-NTIUITests.debug.xcconfig"; path = "Target Support Files/Pods-NTI-NTIUITests/Pods-NTI-NTIUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,6 +170,7 @@
 		BB53EBF42704BDAF00E1BF87 /* NTI */ = {
 			isa = PBXGroup;
 			children = (
+				BBB5116327073BCB00DA5A13 /* Constants */,
 				BB53EC38270688BF00E1BF87 /* Base */,
 				BB53EC37270688B200E1BF87 /* Dependencies */,
 				BB53EC362706889A00E1BF87 /* Coordinator */,
@@ -186,7 +191,8 @@
 		BB53EC0B2704BDB200E1BF87 /* NTITests */ = {
 			isa = PBXGroup;
 			children = (
-				BB53EC0C2704BDB200E1BF87 /* NTITests.swift */,
+				BB53EC4A27069EB800E1BF87 /* TimeHelperMock.swift */,
+				BBB511612706B72E00DA5A13 /* TimeHelperTests.swift */,
 			);
 			path = NTITests;
 			sourceTree = "<group>";
@@ -213,7 +219,7 @@
 		BB53EC2F270686EE00E1BF87 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				BB53EC302706875C00E1BF87 /* TrainSchedule.swift */,
+				BB53EC302706875C00E1BF87 /* TimeHelper.swift */,
 				BB53EC4627068A4500E1BF87 /* ReachabilityHelper.swift */,
 				BB53EC4827068A7E00E1BF87 /* PrintHelper.swift */,
 			);
@@ -284,6 +290,14 @@
 				BB53EC3C2706890600E1BF87 /* CoordinatorProtocol.swift */,
 			);
 			path = protocol;
+			sourceTree = "<group>";
+		};
+		BBB5116327073BCB00DA5A13 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				BBB5116427073C4B00DA5A13 /* GlobalConstant.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -493,7 +507,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
 		};
 		BCD32E4FC0EC41812EF29A1B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -573,10 +587,11 @@
 				BB53EC43270689FD00E1BF87 /* BaseViewModel.swift in Sources */,
 				BB53EBF62704BDAF00E1BF87 /* AppDelegate.swift in Sources */,
 				BB53EC272704BE1200E1BF87 /* TrainModel.swift in Sources */,
+				BBB5116527073C4B00DA5A13 /* GlobalConstant.swift in Sources */,
 				BB53EC4927068A7E00E1BF87 /* PrintHelper.swift in Sources */,
 				BB53EBF82704BDAF00E1BF87 /* SceneDelegate.swift in Sources */,
 				BB53EC292704BE2400E1BF87 /* DestinationModel.swift in Sources */,
-				BB53EC312706875C00E1BF87 /* TrainSchedule.swift in Sources */,
+				BB53EC312706875C00E1BF87 /* TimeHelper.swift in Sources */,
 				BB53EC3D2706890600E1BF87 /* MainCoordinatorProctocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -585,7 +600,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB53EC0D2704BDB200E1BF87 /* NTITests.swift in Sources */,
+				BB53EC4B27069EB800E1BF87 /* TimeHelperMock.swift in Sources */,
+				BBB511622706B72E00DA5A13 /* TimeHelperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
