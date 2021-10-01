@@ -1,0 +1,6 @@
+framework module Pods_NTI {
+  umbrella header "Pods-NTI-umbrella.h"
+
+  export *
+  module * { export * }
+}

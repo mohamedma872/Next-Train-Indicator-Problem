@@ -9,5 +9,5 @@ import Foundation
 struct DestinationModel {
     var name: String
     // Frequency in Min
-    var frequency : (frequencyTime:Int,measurementUnit: String, startH:String?, endH: String?)
+    var frequency : (frequencyTime:Int,measurementUnit: MeasureUnit, startH:String?, endH: String?)
 }
