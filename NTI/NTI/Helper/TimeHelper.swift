@@ -23,6 +23,9 @@ import UIKit
 
 class TimeHelper : ITimeHelper
 {
+    static let shared = TimeHelper()
+    // we have to remove the private keyword so that we can override it. If not, the compiler will complain. This is why that line is commented out above.
+    private init() {}
     /// check current or specific time is between two range or not
     /// - Parameters:
     ///   - currentTime: this paramter is current time .
@@ -58,9 +61,7 @@ class TimeHelper : ITimeHelper
         }
         return nil
     }
-    static let shared = TimeHelper()
-    // we have to remove the private keyword so that we can override it. If not, the compiler will complain. This is why that line is commented out above.
-    private init() {}
+
 }
 
 extension Formatter {
