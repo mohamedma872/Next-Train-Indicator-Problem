@@ -18,7 +18,7 @@ class SchedulesStationHelperTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testGet_Schedules_ForStation_withOutStartTimeAndEndTime_withMints_Interval() throws {
+    func testGet_Schedules_ForStationCentral​_withOutStartTimeAndEndTime_WithMints_Interval() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
@@ -29,12 +29,10 @@ class SchedulesStationHelperTests: XCTestCase {
         // Mock Destination Model
         let central​StationSchedules = sut.getSchedulesForStation(frequencyTime: 20, measurementUnit: RepeatIntervalUnit.minute, startH: nil, endH: nil) ?? []
         
-        //  let central​Station = DestinationModel(name: "central​Station", frequency: (frequencyTime: 20, measurementUnit: RepeatIntervalUnit.minute, startH: nil, endH: nil), schedulesLst: central​StationSchedules)
-        
         // then
         XCTAssertEqual(central​StationSchedules.count, 73)
     }
-    func testGet_Schedules_ForStation_withOutStartTimeAndEndTime_withHour_Interval() throws {
+    func testGet_Schedules_ForStationCircular_withOutStartTimeAndEndTime_WithHour_Interval() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
@@ -43,13 +41,46 @@ class SchedulesStationHelperTests: XCTestCase {
         
         // when
         // Mock Destination Model
-        let central​StationSchedules = sut.getSchedulesForStation(frequencyTime: 1, measurementUnit: RepeatIntervalUnit.hour, startH: nil, endH: nil) ?? []
-        
-        //  let central​Station = DestinationModel(name: "central​Station", frequency: (frequencyTime: 20, measurementUnit: RepeatIntervalUnit.minute, startH: nil, endH: nil), schedulesLst: central​StationSchedules)
+        let circularStationSchedules = sut.getSchedulesForStation(frequencyTime: 1, measurementUnit: RepeatIntervalUnit.hour, startH: nil, endH: nil) ?? []
+
         
         // then
-        XCTAssertEqual(central​StationSchedules.count, 25)
+        XCTAssertEqual(circularStationSchedules.count, 25)
     }
     
-    
+    func testGet_Schedules_ForStationNorth​Square_withStartTimeAndEndTime_WithHour_Interval() throws {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        // given
+        let sut = SchedulesStationHelperMock(specificTime: "8:00")
+        
+        // when
+        // Mock Destination Model
+        let startTime = Formatter.getDateFormatter().date(from: "07:00")
+        let EndTime = Formatter.getDateFormatter().date(from: "22:00")
+        let north​SquareStationSchedules = sut.getSchedulesForStation(frequencyTime: 12, measurementUnit: RepeatIntervalUnit.minute, startH: startTime, endH: EndTime) ?? []
+
+        
+        // then
+        XCTAssertEqual(north​SquareStationSchedules.count, 76)
+    }
+    func testGet_Schedules_ForStationWest​Market_withStartTimeAndEndTime_WithMints_Interval() throws {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        // given
+        let sut = SchedulesStationHelperMock(specificTime: "8:00")
+        
+        // when
+        // Mock Destination Model
+        let startTime = Formatter.getDateFormatter().date(from: "05:30")
+        let EndTime = Formatter.getDateFormatter().date(from: "01:30")
+        let west​MarketStationSchedules = sut.getSchedulesForStation(frequencyTime: 6, measurementUnit: RepeatIntervalUnit.minute, startH: startTime, endH: EndTime) ?? []
+
+        
+        // then
+        XCTAssertEqual(west​MarketStationSchedules.count, 241)
+    }
+   
 }

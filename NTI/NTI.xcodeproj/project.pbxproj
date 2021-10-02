@@ -11,9 +11,16 @@
 		BB209CA027076239009E00E8 /* SchedulesStationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB209C9F27076239009E00E8 /* SchedulesStationHelper.swift */; };
 		BB209CA227077F79009E00E8 /* SchedulesStationHelperMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB209CA127077F78009E00E8 /* SchedulesStationHelperMock.swift */; };
 		BB209CA527078E37009E00E8 /* SchedulesStationHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB209CA427078E37009E00E8 /* SchedulesStationHelperTests.swift */; };
+		BB209CA72707B339009E00E8 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB209CA62707B339009E00E8 /* AppCoordinator.swift */; };
+		BB209CA92707B365009E00E8 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB209CA82707B365009E00E8 /* MainCoordinator.swift */; };
+		BB209CAB2707B3A9009E00E8 /* IndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB209CAA2707B3A9009E00E8 /* IndicatorViewController.swift */; };
+		BB209CAD2707B9DC009E00E8 /* IndicatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB209CAC2707B9DC009E00E8 /* IndicatorViewModel.swift */; };
+		BB209CAF2707BA6E009E00E8 /* IndicatorCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB209CAE2707BA6E009E00E8 /* IndicatorCellViewModel.swift */; };
+		BB209CB22707BC9E009E00E8 /* IndicatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB209CB02707BC9E009E00E8 /* IndicatorTableViewCell.swift */; };
+		BB209CB32707BC9E009E00E8 /* IndicatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB209CB12707BC9E009E00E8 /* IndicatorTableViewCell.xib */; };
+		BB209CB72707CA85009E00E8 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB209CB62707CA85009E00E8 /* UIViewController + Extension.swift */; };
 		BB53EBF62704BDAF00E1BF87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EBF52704BDAF00E1BF87 /* AppDelegate.swift */; };
 		BB53EBF82704BDAF00E1BF87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EBF72704BDAF00E1BF87 /* SceneDelegate.swift */; };
-		BB53EBFA2704BDAF00E1BF87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EBF92704BDAF00E1BF87 /* ViewController.swift */; };
 		BB53EBFD2704BDAF00E1BF87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB53EBFB2704BDAF00E1BF87 /* Main.storyboard */; };
 		BB53EBFF2704BDB100E1BF87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB53EBFE2704BDB100E1BF87 /* Assets.xcassets */; };
 		BB53EC022704BDB100E1BF87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB53EC002704BDB100E1BF87 /* LaunchScreen.storyboard */; };
@@ -35,6 +42,8 @@
 		BB53EC4B27069EB800E1BF87 /* TimeHelperMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC4A27069EB800E1BF87 /* TimeHelperMock.swift */; };
 		BBB511622706B72E00DA5A13 /* TimeHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB511612706B72E00DA5A13 /* TimeHelperTests.swift */; };
 		BBB5116527073C4B00DA5A13 /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5116427073C4B00DA5A13 /* GlobalConstant.swift */; };
+		BBC278A52707D6BB002EA970 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC278A42707D6BB002EA970 /* Repository.swift */; };
+		BBC278A82707D87A002EA970 /* IndicatorImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC278A72707D87A002EA970 /* IndicatorImp.swift */; };
 		E3516498A0298483A877DB25 /* Pods_NTITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB2DCB1CBDBFD0C4B5034AB /* Pods_NTITests.framework */; };
 		EE80AFC081C88002B673CC64 /* Pods_NTI_NTIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05FC017A6E0B7E42859B57CF /* Pods_NTI_NTIUITests.framework */; };
 /* End PBXBuildFile section */
@@ -68,10 +77,17 @@
 		BB209C9F27076239009E00E8 /* SchedulesStationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesStationHelper.swift; sourceTree = "<group>"; };
 		BB209CA127077F78009E00E8 /* SchedulesStationHelperMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesStationHelperMock.swift; sourceTree = "<group>"; };
 		BB209CA427078E37009E00E8 /* SchedulesStationHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesStationHelperTests.swift; sourceTree = "<group>"; };
+		BB209CA62707B339009E00E8 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		BB209CA82707B365009E00E8 /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		BB209CAA2707B3A9009E00E8 /* IndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorViewController.swift; sourceTree = "<group>"; };
+		BB209CAC2707B9DC009E00E8 /* IndicatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorViewModel.swift; sourceTree = "<group>"; };
+		BB209CAE2707BA6E009E00E8 /* IndicatorCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorCellViewModel.swift; sourceTree = "<group>"; };
+		BB209CB02707BC9E009E00E8 /* IndicatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorTableViewCell.swift; sourceTree = "<group>"; };
+		BB209CB12707BC9E009E00E8 /* IndicatorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IndicatorTableViewCell.xib; sourceTree = "<group>"; };
+		BB209CB62707CA85009E00E8 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		BB53EBF22704BDAF00E1BF87 /* NTI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NTI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB53EBF52704BDAF00E1BF87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB53EBF72704BDAF00E1BF87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BB53EBF92704BDAF00E1BF87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BB53EBFC2704BDAF00E1BF87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB53EBFE2704BDB100E1BF87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB53EC012704BDB100E1BF87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -96,6 +112,8 @@
 		BB53EC4A27069EB800E1BF87 /* TimeHelperMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHelperMock.swift; sourceTree = "<group>"; };
 		BBB511612706B72E00DA5A13 /* TimeHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHelperTests.swift; sourceTree = "<group>"; };
 		BBB5116427073C4B00DA5A13 /* GlobalConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
+		BBC278A42707D6BB002EA970 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		BBC278A72707D87A002EA970 /* IndicatorImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorImp.swift; sourceTree = "<group>"; };
 		EC3217B8D20EF054F2F36239 /* Pods-NTI-NTIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTI-NTIUITests.debug.xcconfig"; path = "Target Support Files/Pods-NTI-NTIUITests/Pods-NTI-NTIUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +177,23 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		BB209CB42707BCF7009E00E8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BB209CB02707BC9E009E00E8 /* IndicatorTableViewCell.swift */,
+				BB209CB12707BC9E009E00E8 /* IndicatorTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BB209CB52707CA73009E00E8 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				BB209CB62707CA85009E00E8 /* UIViewController + Extension.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
 		BB53EBE92704BDAF00E1BF87 = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +220,7 @@
 		BB53EBF42704BDAF00E1BF87 /* NTI */ = {
 			isa = PBXGroup;
 			children = (
+				BB209CB52707CA73009E00E8 /* Extentions */,
 				BBB5116327073BCB00DA5A13 /* Constants */,
 				BB53EC38270688BF00E1BF87 /* Base */,
 				BB53EC37270688B200E1BF87 /* Dependencies */,
@@ -194,7 +230,6 @@
 				BB53EC252704BDE900E1BF87 /* Model */,
 				BB53EBF52704BDAF00E1BF87 /* AppDelegate.swift */,
 				BB53EBF72704BDAF00E1BF87 /* SceneDelegate.swift */,
-				BB53EBF92704BDAF00E1BF87 /* ViewController.swift */,
 				BB53EBFB2704BDAF00E1BF87 /* Main.storyboard */,
 				BB53EBFE2704BDB100E1BF87 /* Assets.xcassets */,
 				BB53EC002704BDB100E1BF87 /* LaunchScreen.storyboard */,
@@ -254,6 +289,7 @@
 		BB53EC332706885B00E1BF87 /* PlatformIndicator */ = {
 			isa = PBXGroup;
 			children = (
+				BBC278A62707D841002EA970 /* RepositoryImp */,
 				BB53EC352706887C00E1BF87 /* ViewModel */,
 				BB53EC342706887700E1BF87 /* View */,
 			);
@@ -263,6 +299,8 @@
 		BB53EC342706887700E1BF87 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BB209CB42707BCF7009E00E8 /* Cell */,
+				BB209CAA2707B3A9009E00E8 /* IndicatorViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -270,6 +308,8 @@
 		BB53EC352706887C00E1BF87 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				BB209CAC2707B9DC009E00E8 /* IndicatorViewModel.swift */,
+				BB209CAE2707BA6E009E00E8 /* IndicatorCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -277,6 +317,8 @@
 		BB53EC362706889A00E1BF87 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				BB209CA82707B365009E00E8 /* MainCoordinator.swift */,
+				BB209CA62707B339009E00E8 /* AppCoordinator.swift */,
 				BB53EC392706890600E1BF87 /* protocol */,
 			);
 			path = Coordinator;
@@ -295,6 +337,7 @@
 			children = (
 				BB53EC42270689FD00E1BF87 /* BaseViewModel.swift */,
 				BB53EC4427068A1C00E1BF87 /* BaseViewController.swift */,
+				BBC278A42707D6BB002EA970 /* Repository.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -315,6 +358,14 @@
 				BBB5116427073C4B00DA5A13 /* GlobalConstant.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		BBC278A62707D841002EA970 /* RepositoryImp */ = {
+			isa = PBXGroup;
+			children = (
+				BBC278A72707D87A002EA970 /* IndicatorImp.swift */,
+			);
+			path = RepositoryImp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB53EC2D2704CDB900E1BF87 /* .swiftlint.yml in Resources */,
+				BB209CB32707BC9E009E00E8 /* IndicatorTableViewCell.xib in Resources */,
 				BB53EC022704BDB100E1BF87 /* LaunchScreen.storyboard in Resources */,
 				BB53EBFF2704BDB100E1BF87 /* Assets.xcassets in Resources */,
 				BB53EBFD2704BDAF00E1BF87 /* Main.storyboard in Resources */,
@@ -595,18 +647,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB53EC4527068A1C00E1BF87 /* BaseViewController.swift in Sources */,
+				BB209CB72707CA85009E00E8 /* UIViewController + Extension.swift in Sources */,
 				BB209CA027076239009E00E8 /* SchedulesStationHelper.swift in Sources */,
 				BB53EC3E2706890600E1BF87 /* StoryboardedProtocol.swift in Sources */,
-				BB53EBFA2704BDAF00E1BF87 /* ViewController.swift in Sources */,
+				BB209CAB2707B3A9009E00E8 /* IndicatorViewController.swift in Sources */,
+				BB209CAD2707B9DC009E00E8 /* IndicatorViewModel.swift in Sources */,
+				BB209CB22707BC9E009E00E8 /* IndicatorTableViewCell.swift in Sources */,
 				BB53EC3F2706890600E1BF87 /* CoordinatorProtocol.swift in Sources */,
 				BB53EC4727068A4500E1BF87 /* ReachabilityHelper.swift in Sources */,
+				BB209CA72707B339009E00E8 /* AppCoordinator.swift in Sources */,
 				BB53EC2B2704C93000E1BF87 /* Next​Train​​Indicator​Model.swift in Sources */,
+				BBC278A82707D87A002EA970 /* IndicatorImp.swift in Sources */,
+				BBC278A52707D6BB002EA970 /* Repository.swift in Sources */,
 				BB53EC41270689AC00E1BF87 /* AppDelegate+Setup.swift in Sources */,
 				BB53EC43270689FD00E1BF87 /* BaseViewModel.swift in Sources */,
 				BB53EBF62704BDAF00E1BF87 /* AppDelegate.swift in Sources */,
 				BB53EC272704BE1200E1BF87 /* TrainModel.swift in Sources */,
+				BB209CAF2707BA6E009E00E8 /* IndicatorCellViewModel.swift in Sources */,
 				BBB5116527073C4B00DA5A13 /* GlobalConstant.swift in Sources */,
 				BB53EC4927068A7E00E1BF87 /* PrintHelper.swift in Sources */,
+				BB209CA92707B365009E00E8 /* MainCoordinator.swift in Sources */,
 				BB53EBF82704BDAF00E1BF87 /* SceneDelegate.swift in Sources */,
 				BB53EC292704BE2400E1BF87 /* DestinationModel.swift in Sources */,
 				BB53EC312706875C00E1BF87 /* TimeHelper.swift in Sources */,

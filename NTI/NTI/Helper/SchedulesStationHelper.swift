@@ -17,6 +17,10 @@ protocol ISchedulesStationHelper{
     func getSchedulesForStation(frequencyTime: Int,measurementUnit: RepeatIntervalUnit, startH: Date?, endH: Date?) -> [Date]?
 }
 class SchedulesStationHelper : ISchedulesStationHelper{
+    
+    static let shared = SchedulesStationHelper()
+    // we have to remove the private keyword so that we can override it. If not, the compiler will complain. This is why that line is commented out above.
+    private init() {}
     /// Get the schedules List that represent the train schedules like train time table for every station based on the params
     /// - Parameters:
     ///   - frequencyTime: represent the repeated time like evey 6 min the train will arrive to this destination
@@ -28,12 +32,24 @@ class SchedulesStationHelper : ISchedulesStationHelper{
         //  the first case that we have startTime and endTime
         if let startTime = startH ,let endTime = endH
         {
+            var startDate: Date
+            var endDate: Date
+            // for the case of West​ ​Market , start time : 05:30 , endTime: 01:30
+            if(startTime > endTime)
+            {
+                 startDate = DateComponents(calendar: .current, day: Date().dayNumberOfWeek()!).date!
+                 endDate = DateComponents(calendar: .current, day: Date().dayNumberOfWeek()! + 1).date!
+            }else
+            {
+                startDate = startTime
+                endDate   = endTime
+            }
             switch measurementUnit {
             case .minute:
-                let intervals = TimeDay(startDate: startTime, endDate: endTime, step: DateComponents(minute: frequencyTime))
+                let intervals = TimeDay(startDate: startDate, endDate: endDate, step: DateComponents(minute: frequencyTime))
                 return intervals.timeIntervals
             case .hour:
-                let intervals = TimeDay(startDate: startTime, endDate: endTime, step: DateComponents(minute: frequencyTime))
+                let intervals = TimeDay(startDate: startDate, endDate: endDate, step: DateComponents(hour: frequencyTime))
                 return intervals.timeIntervals
             }
         }
