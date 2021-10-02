@@ -10,20 +10,22 @@ import XCTest
 
 class SchedulesStationHelperTests: XCTestCase {
     
-    override func setUpWithError() throws {
+    var sut : ISchedulesStationHelper!
+    override func setUp() {
+           super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        sut = SchedulesStationHelperMock(specificTime: "8:00")
     }
-    
-    override func tearDownWithError() throws {
+
+    override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
+        super.tearDown()
     }
     
     func testGet_Schedules_ForStationCentral​_withOutStartTimeAndEndTime_WithMints_Interval() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
-        // given
-        let sut = SchedulesStationHelperMock(specificTime: "8:00")
         
         // when
         // Mock Destination Model
@@ -35,9 +37,6 @@ class SchedulesStationHelperTests: XCTestCase {
     func testGet_Schedules_ForStationCircular_withOutStartTimeAndEndTime_WithHour_Interval() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
-        // given
-        let sut = SchedulesStationHelperMock(specificTime: "8:00")
         
         // when
         // Mock Destination Model
@@ -52,9 +51,6 @@ class SchedulesStationHelperTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
-        // given
-        let sut = SchedulesStationHelperMock(specificTime: "8:00")
-        
         // when
         // Mock Destination Model
         let startTime = Formatter.getDateFormatter().date(from: "07:00")
@@ -68,9 +64,6 @@ class SchedulesStationHelperTests: XCTestCase {
     func testGet_Schedules_ForStationWest​Market_withStartTimeAndEndTime_WithMints_Interval() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
-        // given
-        let sut = SchedulesStationHelperMock(specificTime: "8:00")
         
         // when
         // Mock Destination Model

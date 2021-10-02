@@ -14,11 +14,11 @@ import UIKit
     ///   - startTimeRange: this paramter is start time range .
     ///   - endTimeRange: this paramter is end time range .
     /// - Returns: Bool
-    @objc optional func checkTimeWithinStationTimeRange(currentTime: Date,startTimeRange: Date,endTimeRange: Date) -> Bool
+    func checkTimeWithinStationTimeRange(currentTime: Date,startTimeRange: Date,endTimeRange: Date) -> Bool
     /// Get current time in predefined format
     ///
     /// - returns: String?
-    @objc optional func getTimeNow() -> String?
+    func getTimeNow() -> String?
 }
 
 class TimeHelper : ITimeHelper
@@ -54,14 +54,13 @@ class TimeHelper : ITimeHelper
     /// - returns: String?
     func getTimeNow() -> String?
     {
-        let now = Date()
+        let now = Date().toCurrentTimezone()
         if let formate = now.getFormattedDate()
         {
             return formate
         }
         return nil
     }
-
 }
 
 extension Formatter {
@@ -71,6 +70,7 @@ extension Formatter {
         let dateformate = DateFormatter()
         dateformate.dateFormat = GlobalConstants.format
         dateformate.locale = Locale.current
+        dateformate.timeZone = TimeZone.current
         return dateformate
     }
 }
@@ -87,6 +87,11 @@ extension Date {
     func currenthourNumber() -> Int? {
         return Calendar.current.dateComponents([.hour], from: self).hour
     }
+    func toCurrentTimezone() -> Date {
+           let timeZoneDifference =
+           TimeInterval(TimeZone.current.secondsFromGMT())
+           return self.addingTimeInterval(timeZoneDifference)
+      }
 }
 
 

@@ -10,23 +10,25 @@ import RxSwift
 import RxCocoa
 
 
-class IndicatorViewController: UIViewController , Storyboarded {
+class IndicatorViewController: BaseViewController , Storyboarded {
     @IBOutlet weak var indicatorTableView: UITableView!
     @IBOutlet weak var currentTimeLabel: UILabel!
     weak var coordinator: MainCoordinator?
     let disposeBag = DisposeBag()
     let indicatorTableViewCell = "IndicatorTableViewCell"
     var viewModel : IndicatorViewModel?
-    var timer = Timer()
     override func viewDidLoad() {
         super.viewDidLoad()
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector:#selector(self.tick) , userInfo: nil, repeats: true)
-
+        Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance)
+            .subscribe(onNext: { _ in
+                self.tick()
+            })
+            .disposed(by: disposeBag)
         setupTableView()
         bindViewModel()
     }
-    @objc func tick() {
-        currentTimeLabel.text = Formatter.getDateFormatter().string(from: Date())
+     func tick() {
+        currentTimeLabel.text = Formatter.getDateFormatter().string(from: Date().toCurrentTimezone())
         }
     func setupTableView() {
         indicatorTableView.register(UINib(nibName: indicatorTableViewCell, bundle: nil), forCellReuseIdentifier: indicatorTableViewCell)
@@ -51,6 +53,12 @@ class IndicatorViewController: UIViewController , Storyboarded {
             .subscribe()
             .disposed(by: disposeBag)
         subscribeToResponse()
+        viewmodel.getStations()
+        Observable<Int>.interval(.seconds(GlobalConstants.refreshTime * 60), scheduler: MainScheduler.instance)
+            .subscribe(onNext: { _ in
+                viewmodel.getStations()
+            })
+            .disposed(by: disposeBag)
     }
     func subscribeToResponse() {
         guard  let viewmodel = viewModel else {

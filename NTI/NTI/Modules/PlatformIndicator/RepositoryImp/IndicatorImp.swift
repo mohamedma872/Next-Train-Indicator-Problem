@@ -10,16 +10,18 @@ import RxCocoa
 import RxSwift
 class IndicatorImp: Repository
 {
-    typealias T = DestinationModel
+    typealias T = Next​Train​​Indicator​Model
     var schedulesStationHelper: ISchedulesStationHelper
-    init(schedulesStationHelper: ISchedulesStationHelper)
+    var timeHelper: ITimeHelper
+    init(schedulesStationHelper: ISchedulesStationHelper,timeHelper: ITimeHelper)
     {
         self.schedulesStationHelper = schedulesStationHelper
+        self.timeHelper = timeHelper
     }
     func list() -> Observable<[T?]> {
         return Observable.create { observer -> Disposable in
             var stationLst:[DestinationModel] = []
-           // For Central​ ​Station
+            // For Central​ ​Station
             let central​StationSchedules = self.schedulesStationHelper.getSchedulesForStation(frequencyTime: 20, measurementUnit: RepeatIntervalUnit.minute, startH: nil, endH: nil) ?? []
             let central​Station = DestinationModel(name: "Central​", frequency: (frequencyTime: 20, measurementUnit: RepeatIntervalUnit.minute, startH: nil, endH: nil),schedulesLst: central​StationSchedules )
             stationLst.append(central​Station)
@@ -39,7 +41,33 @@ class IndicatorImp: Repository
             let west​StationSchedules = self.schedulesStationHelper.getSchedulesForStation(frequencyTime: 6, measurementUnit: RepeatIntervalUnit.minute, startH: westStartTime, endH: westEndTime) ?? []
             let west​Station = DestinationModel(name: "West​ ​Market", frequency: (frequencyTime: 6, measurementUnit: RepeatIntervalUnit.minute, startH: westStartTime, endH: westEndTime),schedulesLst: west​StationSchedules )
             stationLst.append(west​Station)
-            observer.onNext(stationLst)
+            // filter
+            var scheduleList:[Next​Train​​Indicator​Model] = []
+            let calendar = Calendar.current
+            // get current time as string
+            if let nowTimeString = self.timeHelper.getTimeNow()
+            {
+                // Convert String to Date
+                if  let nowTime =  Formatter.getDateFormatter().date(from: nowTimeString)?.toCurrentTimezone()
+                {
+                    // get current time + 15 mints
+                    if  let newTime = calendar.date(byAdding: .minute, value: 15, to: nowTime){
+                        // filter it to get times less than or equal current time + 15 mints && more than or equal current time
+                        stationLst = stationLst.filter({
+                            model -> Bool in
+                            // sort it by time asc
+                            // i built the new model Next​Train​​Indicator​Model
+                            // i checked the station time withing range (current , current + 15 mints) and return this items
+                            let result = model.schedulesLst.filter({ self.timeHelper.checkTimeWithinStationTimeRange(currentTime: $0, startTimeRange: nowTime, endTimeRange: newTime)}).map({Next​Train​​Indicator​Model(destinationName: model.name, trainArrivalTime: $0)})
+                            scheduleList.append(contentsOf: result)
+                            return result.count > 0 ? true : false
+                        })
+                    }
+                }
+            }
+            // i sorted the final list asc
+            scheduleList = scheduleList.sorted(by: {$0.trainArrivalTime < $1.trainArrivalTime})
+            observer.onNext(scheduleList)
             return Disposables.create()
         }
     }

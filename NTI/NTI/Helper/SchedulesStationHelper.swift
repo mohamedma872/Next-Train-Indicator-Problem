@@ -17,7 +17,6 @@ protocol ISchedulesStationHelper{
     func getSchedulesForStation(frequencyTime: Int,measurementUnit: RepeatIntervalUnit, startH: Date?, endH: Date?) -> [Date]?
 }
 class SchedulesStationHelper : ISchedulesStationHelper{
-    
     static let shared = SchedulesStationHelper()
     // we have to remove the private keyword so that we can override it. If not, the compiler will complain. This is why that line is commented out above.
     private init() {}
