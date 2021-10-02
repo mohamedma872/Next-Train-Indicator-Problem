@@ -17,10 +17,8 @@ enum IndicatorTableViewCellType {
 
 class IndicatorViewModel : BaseViewModel {
     let disposeBag = DisposeBag()
-    private let schedulesStationHelperInstance: ISchedulesStationHelper
     private let repository: RepositoryProtocolBase
-    init(schedulesInstance : ISchedulesStationHelper ,indicatorRepository: RepositoryProtocolBase ) {
-        self.schedulesStationHelperInstance = schedulesInstance
+    init(indicatorRepository: RepositoryProtocolBase ) {
         self.repository = indicatorRepository
         CellsObservable = cells.asObservable()
     }
@@ -33,4 +31,22 @@ class IndicatorViewModel : BaseViewModel {
     private let cells = BehaviorRelay<[IndicatorTableViewCellType]>(value: [])
     var CellsObservable: Observable<[IndicatorTableViewCellType]>
     let onShowError = PublishSubject<String>()
+    func getStations() {
+        loadingBehavior.accept(true)
+        self.cells.accept([])
+        (repository as! IndicatorImp).list().subscribe(
+                    onNext: { [weak self] res  in
+                        let data = res as [Next​Train​​Indicator​Model?]
+                        self?.loadingBehavior.accept(false)
+                        // i got the order of every element with enumerated()
+                        self?.cells.accept(data.enumerated().compactMap { (offset, value) in .normal(cellViewModel: IndicatorCellViewModel(order: offset + 1, destinationName: value!.destinationName, destintationTime: value!.trainArrivalTime)) })
+                    },
+                    onError: { [weak self] err in
+                        self?.loadingBehavior.accept(false)
+                        self?.onShowError.onNext(err.localizedDescription)
+                    }
+                )
+                .disposed(by: disposeBag)
+     }
+
 }

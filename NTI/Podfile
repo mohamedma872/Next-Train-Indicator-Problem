@@ -13,8 +13,6 @@ target 'NTI' do
   pod 'MBProgressHUD'
   pod 'SwiftLint', '~> 0.27'
   pod 'Swinject'
-  pod 'Sourcery'
-  pod 'SwiftyMocky'
   pod 'ReachabilitySwift'
   target 'NTITests' do
     inherit! :search_paths
