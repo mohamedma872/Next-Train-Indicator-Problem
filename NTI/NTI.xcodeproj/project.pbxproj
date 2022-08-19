@@ -79,6 +79,7 @@
 		BB03CBBA28AFDA8900514ED6 /* AppDelegate+Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Setup.swift"; sourceTree = "<group>"; };
 		BB03CBC028AFDB7800514ED6 /* AppDelegate+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Setup.swift"; sourceTree = "<group>"; };
 		BB03CBC128AFDB7800514ED6 /* AppDelegate+Setup copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Setup copy.swift"; sourceTree = "<group>"; };
+		BB03CBC428AFDC4300514ED6 /* AppDelegate+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Setup.swift"; sourceTree = "<group>"; };
 		BB209C9F27076239009E00E8 /* SchedulesStationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesStationHelper.swift; sourceTree = "<group>"; };
 		BB209CA127077F78009E00E8 /* SchedulesStationHelperMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesStationHelperMock.swift; sourceTree = "<group>"; };
 		BB209CA427078E37009E00E8 /* SchedulesStationHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesStationHelperTests.swift; sourceTree = "<group>"; };
@@ -190,6 +191,14 @@
 			path = Dependencies;
 			sourceTree = "<group>";
 		};
+		BB03CBC328AFDC2400514ED6 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				BB03CBC428AFDC4300514ED6 /* AppDelegate+Setup.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		BB209CA327078E0B009E00E8 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +252,7 @@
 		BB53EBF42704BDAF00E1BF87 /* NTI */ = {
 			isa = PBXGroup;
 			children = (
+				BB03CBC328AFDC2400514ED6 /* New Group */,
 				BB03CBB928AFDA8800514ED6 /* Dependencies */,
 				BB03CBBF28AFDB7800514ED6 /* Dependencies */,
 				BB209CB52707CA73009E00E8 /* Extentions */,
