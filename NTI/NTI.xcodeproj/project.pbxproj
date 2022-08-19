@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3261304DC2F47E4E89C6CB6E /* Pods_NTI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAC5D4BF9383CD1CD1A9C05 /* Pods_NTI.framework */; };
+		BB03CBBB28AFDA8900514ED6 /* AppDelegate+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB03CBBA28AFDA8900514ED6 /* AppDelegate+Setup.swift */; };
 		BB209CA027076239009E00E8 /* SchedulesStationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB209C9F27076239009E00E8 /* SchedulesStationHelper.swift */; };
 		BB209CA227077F79009E00E8 /* SchedulesStationHelperMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB209CA127077F78009E00E8 /* SchedulesStationHelperMock.swift */; };
 		BB209CA527078E37009E00E8 /* SchedulesStationHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB209CA427078E37009E00E8 /* SchedulesStationHelperTests.swift */; };
@@ -33,7 +34,6 @@
 		BB53EC3D2706890600E1BF87 /* MainCoordinatorProctocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC3A2706890600E1BF87 /* MainCoordinatorProctocol.swift */; };
 		BB53EC3E2706890600E1BF87 /* StoryboardedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC3B2706890600E1BF87 /* StoryboardedProtocol.swift */; };
 		BB53EC3F2706890600E1BF87 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC3C2706890600E1BF87 /* CoordinatorProtocol.swift */; };
-		BB53EC41270689AC00E1BF87 /* AppDelegate+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC40270689AC00E1BF87 /* AppDelegate+Setup.swift */; };
 		BB53EC43270689FD00E1BF87 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC42270689FD00E1BF87 /* BaseViewModel.swift */; };
 		BB53EC4527068A1C00E1BF87 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC4427068A1C00E1BF87 /* BaseViewController.swift */; };
 		BB53EC4727068A4500E1BF87 /* ReachabilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53EC4627068A4500E1BF87 /* ReachabilityHelper.swift */; };
@@ -75,6 +75,7 @@
 		5AAC5D4BF9383CD1CD1A9C05 /* Pods_NTI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NTI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB2DCB1CBDBFD0C4B5034AB /* Pods_NTITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NTITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60FFFFB2940E53E31E7476E4 /* Pods-NTI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTI.release.xcconfig"; path = "Target Support Files/Pods-NTI/Pods-NTI.release.xcconfig"; sourceTree = "<group>"; };
+		BB03CBBA28AFDA8900514ED6 /* AppDelegate+Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Setup.swift"; sourceTree = "<group>"; };
 		BB209C9F27076239009E00E8 /* SchedulesStationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesStationHelper.swift; sourceTree = "<group>"; };
 		BB209CA127077F78009E00E8 /* SchedulesStationHelperMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesStationHelperMock.swift; sourceTree = "<group>"; };
 		BB209CA427078E37009E00E8 /* SchedulesStationHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesStationHelperTests.swift; sourceTree = "<group>"; };
@@ -104,7 +105,6 @@
 		BB53EC3A2706890600E1BF87 /* MainCoordinatorProctocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinatorProctocol.swift; sourceTree = "<group>"; };
 		BB53EC3B2706890600E1BF87 /* StoryboardedProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardedProtocol.swift; sourceTree = "<group>"; };
 		BB53EC3C2706890600E1BF87 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
-		BB53EC40270689AC00E1BF87 /* AppDelegate+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Setup.swift"; sourceTree = "<group>"; };
 		BB53EC42270689FD00E1BF87 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		BB53EC4427068A1C00E1BF87 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BB53EC4627068A4500E1BF87 /* ReachabilityHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityHelper.swift; sourceTree = "<group>"; };
@@ -170,6 +170,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BB03CBB928AFDA8800514ED6 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				BB03CBBA28AFDA8900514ED6 /* AppDelegate+Setup.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
 		BB209CA327078E0B009E00E8 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,10 +231,10 @@
 		BB53EBF42704BDAF00E1BF87 /* NTI */ = {
 			isa = PBXGroup;
 			children = (
+				BB03CBB928AFDA8800514ED6 /* Dependencies */,
 				BB209CB52707CA73009E00E8 /* Extentions */,
 				BBB5116327073BCB00DA5A13 /* Constants */,
 				BB53EC38270688BF00E1BF87 /* Base */,
-				BB53EC37270688B200E1BF87 /* Dependencies */,
 				BB53EC362706889A00E1BF87 /* Coordinator */,
 				BB53EC322706883800E1BF87 /* Modules */,
 				BB53EC2F270686EE00E1BF87 /* Helper */,
@@ -325,14 +333,6 @@
 				BB53EC392706890600E1BF87 /* protocol */,
 			);
 			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		BB53EC37270688B200E1BF87 /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				BB53EC40270689AC00E1BF87 /* AppDelegate+Setup.swift */,
-			);
-			path = Dependencies;
 			sourceTree = "<group>";
 		};
 		BB53EC38270688BF00E1BF87 /* Base */ = {
@@ -654,6 +654,7 @@
 				BB209CA027076239009E00E8 /* SchedulesStationHelper.swift in Sources */,
 				BB53EC3E2706890600E1BF87 /* StoryboardedProtocol.swift in Sources */,
 				BB209CAB2707B3A9009E00E8 /* IndicatorViewController.swift in Sources */,
+				BB03CBBB28AFDA8900514ED6 /* AppDelegate+Setup.swift in Sources */,
 				BB209CAD2707B9DC009E00E8 /* IndicatorViewModel.swift in Sources */,
 				BB209CB22707BC9E009E00E8 /* IndicatorTableViewCell.swift in Sources */,
 				BB53EC3F2706890600E1BF87 /* CoordinatorProtocol.swift in Sources */,
@@ -662,7 +663,6 @@
 				BB53EC2B2704C93000E1BF87 /* Next​Train​​Indicator​Model.swift in Sources */,
 				BBC278A82707D87A002EA970 /* IndicatorImp.swift in Sources */,
 				BBC278A52707D6BB002EA970 /* Repository.swift in Sources */,
-				BB53EC41270689AC00E1BF87 /* AppDelegate+Setup.swift in Sources */,
 				BB53EC43270689FD00E1BF87 /* BaseViewModel.swift in Sources */,
 				BB53EBF62704BDAF00E1BF87 /* AppDelegate.swift in Sources */,
 				BB209CAF2707BA6E009E00E8 /* IndicatorCellViewModel.swift in Sources */,
