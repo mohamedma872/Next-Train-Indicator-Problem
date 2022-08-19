@@ -169,12 +169,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BB03CBC328AFDC2400514ED6 /* Dependencies */ = {
+		BB03CBC328AFDC2400514ED6 /* Dependency */ = {
 			isa = PBXGroup;
 			children = (
 				BB03CBC428AFDC4300514ED6 /* AppDelegate+Setup.swift */,
 			);
-			path = Dependencies;
+			path = Dependency;
 			sourceTree = "<group>";
 		};
 		BB209CA327078E0B009E00E8 /* Mocks */ = {
@@ -230,7 +230,7 @@
 		BB53EBF42704BDAF00E1BF87 /* NTI */ = {
 			isa = PBXGroup;
 			children = (
-				BB03CBC328AFDC2400514ED6 /* Dependencies */,
+				BB03CBC328AFDC2400514ED6 /* Dependency */,
 				BB209CB52707CA73009E00E8 /* Extentions */,
 				BBB5116327073BCB00DA5A13 /* Constants */,
 				BB53EC38270688BF00E1BF87 /* Base */,
